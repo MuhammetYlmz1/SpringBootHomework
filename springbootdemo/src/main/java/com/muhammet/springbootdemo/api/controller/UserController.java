@@ -32,9 +32,9 @@ public class UserController {
 		return userService.getByEmailAndPassword(email, password);
 	}*/
 	
-/*	@GetMapping("/getbyid")
+	@GetMapping("/getbyid")
 	public User getById(int id) {
 		return this.getById(id);
-	}*/
+	}
 	
 }

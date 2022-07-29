@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
@@ -23,19 +24,20 @@ public class User {
 	@Column(name="user_id")
 	private int id;
 	
-	@NotNull
+	@NotEmpty
 	@Email(message="Geçerli Email Adresi Giriniz")
 	@Column(name="email_adress")
 	private String emailAdress;
 	
-	@NotNull
+	@NotEmpty
 	@Column(name="full_name")
 	private String fullName;
 	
-	@NotNull
+	@NotEmpty
 	@Column(name="password")
 	private String password;
 	
+	@NotEmpty
 	@Column(name="title")
 	private String title;
 	

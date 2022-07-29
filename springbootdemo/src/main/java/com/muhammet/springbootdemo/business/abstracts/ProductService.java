@@ -10,6 +10,6 @@ public interface ProductService {
 	public List<Product> getAll();
 	public Product getByProductId(int id);
 	List<Product> getByProductName(String name);
-	ResponseEntity<String> saveProduct(Product product);
+	Product saveProduct(Product product);
 	void deletedProduct(int id);
 }

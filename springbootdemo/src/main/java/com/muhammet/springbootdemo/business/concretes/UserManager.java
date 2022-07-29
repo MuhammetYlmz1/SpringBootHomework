@@ -34,10 +34,10 @@ public class UserManager implements UserService{
 		return userDao.getByEmailAdressAndPassword(email,password);
 	}
 
-	/*@Override
+	@Override
 	public User getById(int id) {
 		
 		return this.userDao.getById(id);
-	}*/
+	}
 
 }

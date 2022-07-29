@@ -1,4 +1,4 @@
-package com.muhammet.springbootdemo.business.validation;
+package com.muhammet.springbootdemo.api.controller;
 
 import java.util.HashMap;
 import java.util.Map;

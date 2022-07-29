@@ -62,10 +62,10 @@ public class ProductManager implements ProductService {
 
 
 	@Override
-	public ResponseEntity<String> saveProduct( Product product) {
+	public Product saveProduct( Product product) {
 
-		 productDao.save(product);
-		return ResponseEntity.ok("Ürün Kaydedildi");
+		 
+		return productDao.save(product);
 	}
 
 

@@ -5,6 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -47,9 +48,9 @@ public class ProductController {
 	}
 	
 	@PostMapping("/save")
-	public ResponseEntity<String> saveProduct(@Valid @RequestBody Product product) {
-		
-		return productService.saveProduct(product);
+	public ResponseEntity<Product> saveProduct(@Valid @RequestBody Product product) {
+		Product product1= productService.saveProduct(product);
+		return new ResponseEntity<Product>(product1,HttpStatus.CREATED);
 	}
 	@DeleteMapping("/delete")
 public void deleteProduct( @RequestBody int id) {
